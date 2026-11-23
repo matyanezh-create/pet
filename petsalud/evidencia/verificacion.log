@@ -1,0 +1,73 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.petsalud:backendpetsalud >--------------------
+[INFO] Building backendpetsalud 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ backendpetsalud ---
+[INFO] Deleting <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\target
+[INFO] 
+[INFO] --- jacoco:0.8.13:prepare-agent (instrumentar-pruebas) @ backendpetsalud ---
+[INFO] argLine set to -javaagent:C:\\Users\\Moonlabpc\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.13\\org.jacoco.agent-0.8.13-runtime.jar=destfile=C:\\Users\\Moonlabpc\\Documents\\Codex\\2026-11-20\\re\\work\\petsalud\\target\\jacoco.exec,includes=com/petsalud/backendpetsalud/service/CitaServiceImpl:com/petsalud/backendpetsalud/service/UsuarioServiceImpl:com/petsalud/backendpetsalud/service/MascotaServiceImpl
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backendpetsalud ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ backendpetsalud ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 45 source files with javac [debug parameters release 17] to target\classes
+[WARNING] /<usuario>/Documents/Codex/2026-11-20/re/work/petsalud/src/main/java/com/petsalud/backendpetsalud/security/SecurityConfig.java:[31,17] authorizeRequests(org.springframework.security.config.Customizer<org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer<org.springframework.security.config.annotation.web.builders.HttpSecurity>.ExpressionInterceptUrlRegistry>) in org.springframework.security.config.annotation.web.builders.HttpSecurity has been deprecated and marked for removal
+[INFO] /<usuario>/Documents/Codex/2026-11-20/re/work/petsalud/src/main/java/com/petsalud/backendpetsalud/security/SecurityConfig.java: <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\src\main\java\com\petsalud\backendpetsalud\security\SecurityConfig.java uses or overrides a deprecated API.
+[INFO] /<usuario>/Documents/Codex/2026-11-20/re/work/petsalud/src/main/java/com/petsalud/backendpetsalud/security/SecurityConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ backendpetsalud ---
+[INFO] Copying 0 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ backendpetsalud ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ backendpetsalud ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.petsalud.backendpetsalud.CitaTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.878 s -- in com.petsalud.backendpetsalud.CitaTest
+[INFO] Running com.petsalud.backendpetsalud.MascotaServiceTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s -- in com.petsalud.backendpetsalud.MascotaServiceTest
+[INFO] Running com.petsalud.backendpetsalud.UsuarioServiceTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in com.petsalud.backendpetsalud.UsuarioServiceTest
+[INFO] Running com.petsalud.backendpetsalud.UsuarioTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in com.petsalud.backendpetsalud.UsuarioTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 44, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ backendpetsalud ---
+[INFO] Building jar: <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\target\backendpetsalud-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.4:repackage (repackage) @ backendpetsalud ---
+[INFO] Replacing main artifact <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\target\backendpetsalud-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\target\backendpetsalud-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.13:report (informe-de-cobertura) @ backendpetsalud ---
+[INFO] Loading execution data file <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\target\jacoco.exec
+[INFO] Analyzed bundle 'backendpetsalud' with 3 classes
+[INFO] 
+[INFO] --- jacoco:0.8.13:check (verificar-cobertura-por-servicio) @ backendpetsalud ---
+[INFO] Loading execution data file <usuario>\Documents\Codex\2026-11-20\re\work\petsalud\target\jacoco.exec
+[INFO] Analyzed bundle 'backendpetsalud' with 3 classes
+[INFO] All coverage checks have been met.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.785 s
+[INFO] Finished at: 2026-11-20T00:19:49-03:00
+[INFO] ------------------------------------------------------------------------

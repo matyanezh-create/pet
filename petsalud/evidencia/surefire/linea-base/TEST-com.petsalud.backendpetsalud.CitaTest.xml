@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.petsalud.backendpetsalud.CitaTest" time="1.215" tests="14" errors="1" skipped="0" failures="8" flakes="0">
+  <testcase name="rechazaMascotaInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="1.055" />
+  <testcase name="rechazaHorarioOcupadoParaElMismoVeterinario" classname="com.petsalud.backendpetsalud.CitaTest" time="0.011">
+    <failure message="Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaHorarioOcupadoParaElMismoVeterinario(CitaTest.java:107)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="cancelaCitaPorId" classname="com.petsalud.backendpetsalud.CitaTest" time="0.004" />
+  <testcase name="rechazaPropietarioSinIdentificador" classname="com.petsalud.backendpetsalud.CitaTest" time="0.004">
+    <failure message="expected: &lt;La mascota debe tener un propietario registrado&gt; but was: &lt;Veterinario no encontrado&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;La mascota debe tener un propietario registrado&gt; but was: &lt;Veterinario no encontrado&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaPropietarioSinIdentificador(CitaTest.java:70)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="actualizaEstadoYLuegoPermiteConsultarLaCita" classname="com.petsalud.backendpetsalud.CitaTest" time="0.008" />
+  <testcase name="rechazaMascotaSinPropietario" classname="com.petsalud.backendpetsalud.CitaTest" time="0.0">
+    <failure message="expected: &lt;La mascota debe tener un propietario registrado&gt; but was: &lt;Veterinario no encontrado&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;La mascota debe tener un propietario registrado&gt; but was: &lt;Veterinario no encontrado&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaMascotaSinPropietario(CitaTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="rechazaActualizarCitaInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.0" />
+  <testcase name="consultaCitasConLosFiltrosSolicitados" classname="com.petsalud.backendpetsalud.CitaTest" time="0.0" />
+  <testcase name="rechazaPropietarioInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.028">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;org.mockito.exceptions.misusing.PotentialStubbingProblem&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;org.mockito.exceptions.misusing.PotentialStubbingProblem&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaPropietarioInexistente(CitaTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+Strict stubbing argument mismatch. Please check:
+ - this invocation of 'findById' method:
+    usuarios.findById(2L);
+    -&gt; at com.petsalud.backendpetsalud.service.CitaServiceImpl.agendarCita(CitaServiceImpl.java:34)
+ - has following stubbing(s) with different arguments:
+    1. usuarios.findById(1L);
+      -&gt; at com.petsalud.backendpetsalud.CitaTest.rechazaPropietarioInexistente(CitaTest.java:76)
+Typically, stubbing argument mismatch indicates user mistake when writing tests.
+Mockito fails early so that you can debug potential problem easily.
+However, there are legit scenarios when this exception generates false negative signal:
+  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
+    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
+  - stubbed method is intentionally invoked with different arguments by code under test
+    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
+For more information see javadoc for PotentialStubbingProblem class.
+	at com.petsalud.backendpetsalud.service.CitaServiceImpl.agendarCita(CitaServiceImpl.java:34)
+	at com.petsalud.backendpetsalud.CitaTest.agendar(CitaTest.java:157)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 7 more
+</failure>
+  </testcase>
+  <testcase name="agendaConEstadoInicialYEntidadesRegistradas" classname="com.petsalud.backendpetsalud.CitaTest" time="0.012">
+    <failure message="&#10;Wanted but not invoked:&#10;usuarios.findById(1L);&#10;-&gt; at com.petsalud.backendpetsalud.CitaTest.agendaConEstadoInicialYEntidadesRegistradas(CitaTest.java:49)&#10;&#10;However, there was exactly 1 interaction with this mock:&#10;usuarios.findById(2L);&#10;-&gt; at com.petsalud.backendpetsalud.service.CitaServiceImpl.agendarCita(CitaServiceImpl.java:34)&#10;&#10;" type="Wanted but not invoked">Wanted but not invoked:
+usuarios.findById(1L);
+-&gt; at com.petsalud.backendpetsalud.CitaTest.agendaConEstadoInicialYEntidadesRegistradas(CitaTest.java:49)
+
+However, there was exactly 1 interaction with this mock:
+usuarios.findById(2L);
+-&gt; at com.petsalud.backendpetsalud.service.CitaServiceImpl.agendarCita(CitaServiceImpl.java:34)
+
+
+	at com.petsalud.backendpetsalud.CitaTest.agendaConEstadoInicialYEntidadesRegistradas(CitaTest.java:49)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="rechazaVeterinarioInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.004">
+    <error message="&#10;Unnecessary stubbings detected.&#10;Clean &amp; maintainable test code requires zero unnecessary code.&#10;Following stubbings are unnecessary (click to navigate to relevant line of code):&#10;  1. -&gt; at com.petsalud.backendpetsalud.CitaTest.prepararPropietario(CitaTest.java:148)&#10;Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class." type="org.mockito.exceptions.misusing.UnnecessaryStubbingException">org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean &amp; maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -&gt; at com.petsalud.backendpetsalud.CitaTest.prepararPropietario(CitaTest.java:148)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:197)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</error>
+  </testcase>
+  <testcase name="rechazaPropietarioQueNoEsCliente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.007">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;org.mockito.exceptions.misusing.PotentialStubbingProblem&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;org.mockito.exceptions.misusing.PotentialStubbingProblem&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaPropietarioQueNoEsCliente(CitaTest.java:84)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+Strict stubbing argument mismatch. Please check:
+ - this invocation of 'findById' method:
+    usuarios.findById(2L);
+    -&gt; at com.petsalud.backendpetsalud.service.CitaServiceImpl.agendarCita(CitaServiceImpl.java:34)
+ - has following stubbing(s) with different arguments:
+    1. usuarios.findById(1L);
+      -&gt; at com.petsalud.backendpetsalud.CitaTest.prepararPropietario(CitaTest.java:148)
+Typically, stubbing argument mismatch indicates user mistake when writing tests.
+Mockito fails early so that you can debug potential problem easily.
+However, there are legit scenarios when this exception generates false negative signal:
+  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
+    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
+  - stubbed method is intentionally invoked with different arguments by code under test
+    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
+For more information see javadoc for PotentialStubbingProblem class.
+	at com.petsalud.backendpetsalud.service.CitaServiceImpl.agendarCita(CitaServiceImpl.java:34)
+	at com.petsalud.backendpetsalud.CitaTest.agendar(CitaTest.java:157)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 7 more
+</failure>
+  </testcase>
+  <testcase name="rechazaAsignadoSinRolVeterinario(Rol)[1]" classname="com.petsalud.backendpetsalud.CitaTest" time="0.015">
+    <failure message="Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaAsignadoSinRolVeterinario(CitaTest.java:99)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="rechazaAsignadoSinRolVeterinario(Rol)[2]" classname="com.petsalud.backendpetsalud.CitaTest" time="0.002">
+    <failure message="Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.petsalud.backendpetsalud.CitaTest.verificarRechazo(CitaTest.java:161)
+	at com.petsalud.backendpetsalud.CitaTest.rechazaAsignadoSinRolVeterinario(CitaTest.java:99)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+</testsuite>

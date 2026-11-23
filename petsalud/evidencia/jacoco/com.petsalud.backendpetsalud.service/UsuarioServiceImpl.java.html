@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UsuarioServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backendpetsalud</a> &gt; <a href="index.source.html" class="el_package">com.petsalud.backendpetsalud.service</a> &gt; <span class="el_source">UsuarioServiceImpl.java</span></div><h1>UsuarioServiceImpl.java</h1><pre class="source lang-java linenums">package com.petsalud.backendpetsalud.service;
+
+import com.petsalud.backendpetsalud.entity.Usuario;
+import com.petsalud.backendpetsalud.repository.UsuarioRepository;
+import com.petsalud.backendpetsalud.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L13">public class UsuarioServiceImpl implements UsuarioService {</span>
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    @Override
+    public Usuario registrarUsuario(Usuario usuario) {
+<span class="fc" id="L20">        validarNombre(usuario.getNombre());</span>
+<span class="fc bfc" id="L21" title="All 4 branches covered.">        if (usuario.getEmail() == null || usuario.getEmail().isBlank()) {</span>
+<span class="fc" id="L22">            throw new IllegalArgumentException(&quot;El email es obligatorio&quot;);</span>
+        }
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (usuario.getRol() == null) {</span>
+<span class="fc" id="L25">            throw new IllegalArgumentException(&quot;El rol es obligatorio&quot;);</span>
+        }
+
+<span class="fc" id="L28">        Optional&lt;Usuario&gt; usuarioExistente = usuarioRepository.findByEmail(usuario.getEmail());</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (usuarioExistente.isPresent()) {</span>
+<span class="fc" id="L30">            throw new IllegalArgumentException(&quot;El email ya está registrado&quot;);</span>
+        }
+<span class="fc" id="L32">        return usuarioRepository.save(usuario);</span>
+    }
+
+    @Override
+    public Optional&lt;Usuario&gt; obtenerUsuarioPorId(Long id) {
+<span class="fc" id="L37">        return usuarioRepository.findById(id);</span>
+    }
+
+    @Override
+    public Optional&lt;Usuario&gt; obtenerUsuarioPorEmail(String email) {
+<span class="fc" id="L42">        return usuarioRepository.findByEmail(email);</span>
+    }
+
+    @Override
+    public Usuario actualizarUsuario(Long id, Usuario usuarioActualizado) {
+<span class="fc" id="L47">        return usuarioRepository.findById(id).map(usuario -&gt; {</span>
+<span class="fc" id="L48">            validarNombre(usuarioActualizado.getNombre());</span>
+<span class="fc" id="L49">            usuario.setNombre(usuarioActualizado.getNombre());</span>
+<span class="fc" id="L50">            usuario.setApellido(usuarioActualizado.getApellido());</span>
+<span class="fc" id="L51">            usuario.setTelefono(usuarioActualizado.getTelefono());</span>
+<span class="fc" id="L52">            usuario.setDireccion(usuarioActualizado.getDireccion());</span>
+            // No actualizar email ni password aquí por seguridad
+<span class="fc" id="L54">            return usuarioRepository.save(usuario);</span>
+<span class="fc" id="L55">        }).orElseThrow(() -&gt; new IllegalArgumentException(&quot;Usuario no encontrado&quot;));</span>
+    }
+
+    private void validarNombre(String nombre) {
+<span class="fc bfc" id="L59" title="All 4 branches covered.">        if (nombre == null || nombre.isBlank()) {</span>
+<span class="fc" id="L60">            throw new IllegalArgumentException(&quot;El nombre es obligatorio&quot;);</span>
+        }
+<span class="fc" id="L62">    }</span>
+
+    @Override
+    public void eliminarUsuario(Long id) {
+<span class="fc" id="L66">        usuarioRepository.deleteById(id);</span>
+<span class="fc" id="L67">    }</span>
+
+    @Override
+    public List&lt;Usuario&gt; listarUsuarios() {
+<span class="fc" id="L71">        return usuarioRepository.findAll();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

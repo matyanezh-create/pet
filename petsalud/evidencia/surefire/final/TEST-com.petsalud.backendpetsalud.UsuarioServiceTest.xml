@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.028" tests="17" errors="0" skipped="0" failures="0" flakes="0">
+  <testcase name="registraCadaRolPermitido(Rol)[1]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="registraCadaRolPermitido(Rol)[2]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="registraCadaRolPermitido(Rol)[3]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="rechazaEmailDuplicado" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="rechazaEmailInvalido(String)[1]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="rechazaEmailInvalido(String)[2]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="rechazaEmailInvalido(String)[3]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="rechazaActualizarUsuarioInexistente" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.014" />
+  <testcase name="actualizaDatosDeContactoConservandoEmailYRol" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.002" />
+  <testcase name="consultaListaYEliminaUsuarios" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.002" />
+  <testcase name="rechazaRepresentacionesDeRolAjenoAlEnum(String)[1]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.002" />
+  <testcase name="rechazaRepresentacionesDeRolAjenoAlEnum(String)[2]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.001" />
+  <testcase name="rechazaRepresentacionesDeRolAjenoAlEnum(String)[3]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.001" />
+  <testcase name="rechazaNombreInvalido(String)[1]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.001" />
+  <testcase name="rechazaNombreInvalido(String)[2]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.001" />
+  <testcase name="rechazaNombreInvalido(String)[3]" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+  <testcase name="rechazaRolAusente" classname="com.petsalud.backendpetsalud.UsuarioServiceTest" time="0.0" />
+</testsuite>

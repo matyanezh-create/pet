@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.petsalud.backendpetsalud.CitaTest" time="0.878" tests="14" errors="0" skipped="0" failures="0" flakes="0">
+  <testcase name="rechazaMascotaInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.772" />
+  <testcase name="rechazaHorarioOcupadoParaElMismoVeterinario" classname="com.petsalud.backendpetsalud.CitaTest" time="0.005" />
+  <testcase name="cancelaCitaPorId" classname="com.petsalud.backendpetsalud.CitaTest" time="0.0" />
+  <testcase name="rechazaPropietarioSinIdentificador" classname="com.petsalud.backendpetsalud.CitaTest" time="0.013" />
+  <testcase name="actualizaEstadoYLuegoPermiteConsultarLaCita" classname="com.petsalud.backendpetsalud.CitaTest" time="0.006" />
+  <testcase name="rechazaMascotaSinPropietario" classname="com.petsalud.backendpetsalud.CitaTest" time="0.002" />
+  <testcase name="rechazaActualizarCitaInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.002" />
+  <testcase name="consultaCitasConLosFiltrosSolicitados" classname="com.petsalud.backendpetsalud.CitaTest" time="0.002" />
+  <testcase name="rechazaPropietarioInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.002" />
+  <testcase name="agendaConEstadoInicialYEntidadesRegistradas" classname="com.petsalud.backendpetsalud.CitaTest" time="0.0" />
+  <testcase name="rechazaVeterinarioInexistente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.009" />
+  <testcase name="rechazaPropietarioQueNoEsCliente" classname="com.petsalud.backendpetsalud.CitaTest" time="0.003" />
+  <testcase name="rechazaAsignadoSinRolVeterinario(Rol)[1]" classname="com.petsalud.backendpetsalud.CitaTest" time="0.015" />
+  <testcase name="rechazaAsignadoSinRolVeterinario(Rol)[2]" classname="com.petsalud.backendpetsalud.CitaTest" time="0.007" />
+</testsuite>

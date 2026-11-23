@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MascotaServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backendpetsalud</a> &gt; <a href="index.source.html" class="el_package">com.petsalud.backendpetsalud.service</a> &gt; <span class="el_source">MascotaServiceImpl.java</span></div><h1>MascotaServiceImpl.java</h1><pre class="source lang-java linenums">package com.petsalud.backendpetsalud.service;
+
+import com.petsalud.backendpetsalud.entity.Mascota;
+import com.petsalud.backendpetsalud.entity.Rol;
+import com.petsalud.backendpetsalud.entity.Usuario;
+import com.petsalud.backendpetsalud.repository.MascotaRepository;
+import com.petsalud.backendpetsalud.repository.UsuarioRepository;
+import com.petsalud.backendpetsalud.service.MascotaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L16">public class MascotaServiceImpl implements MascotaService {</span>
+
+    @Autowired
+    private MascotaRepository mascotaRepository;
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    @Override
+    public Mascota registrarMascota(Mascota mascota, Long propietarioId) {
+<span class="fc" id="L26">        validarDatosMascota(mascota);</span>
+<span class="fc" id="L27">        Usuario propietario = usuarioRepository.findById(propietarioId)</span>
+<span class="fc" id="L28">                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Propietario no encontrado&quot;));</span>
+
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (propietario.getRol() != Rol.CLIENTE) {</span>
+<span class="fc" id="L31">            throw new IllegalArgumentException(&quot;El propietario debe tener rol CLIENTE&quot;);</span>
+        }
+<span class="fc" id="L33">        mascota.setPropietario(propietario);</span>
+<span class="fc" id="L34">        return mascotaRepository.save(mascota);</span>
+    }
+
+    @Override
+    public Optional&lt;Mascota&gt; obtenerMascotaPorId(Long id) {
+<span class="fc" id="L39">        return mascotaRepository.findById(id);</span>
+    }
+
+    @Override
+    public Mascota actualizarMascota(Long id, Mascota mascotaActualizada) {
+<span class="fc" id="L44">        return mascotaRepository.findById(id).map(mascota -&gt; {</span>
+<span class="fc" id="L45">            validarDatosMascota(mascotaActualizada);</span>
+<span class="fc" id="L46">            mascota.setNombre(mascotaActualizada.getNombre());</span>
+<span class="fc" id="L47">            mascota.setEspecie(mascotaActualizada.getEspecie());</span>
+<span class="fc" id="L48">            mascota.setRaza(mascotaActualizada.getRaza());</span>
+<span class="fc" id="L49">            mascota.setFechaNacimiento(mascotaActualizada.getFechaNacimiento());</span>
+<span class="fc" id="L50">            mascota.setSexo(mascotaActualizada.getSexo());</span>
+<span class="fc" id="L51">            return mascotaRepository.save(mascota);</span>
+<span class="fc" id="L52">        }).orElseThrow(() -&gt; new IllegalArgumentException(&quot;Mascota no encontrada&quot;));</span>
+    }
+
+    private void validarDatosMascota(Mascota mascota) {
+<span class="fc bfc" id="L56" title="All 4 branches covered.">        if (mascota.getNombre() == null || mascota.getNombre().isBlank()) {</span>
+<span class="fc" id="L57">            throw new IllegalArgumentException(&quot;El nombre de la mascota es obligatorio&quot;);</span>
+        }
+<span class="fc bfc" id="L59" title="All 4 branches covered.">        if (mascota.getEspecie() == null || mascota.getEspecie().isBlank()) {</span>
+<span class="fc" id="L60">            throw new IllegalArgumentException(&quot;La especie de la mascota es obligatoria&quot;);</span>
+        }
+<span class="fc" id="L62">    }</span>
+
+    @Override
+    public void eliminarMascota(Long id) {
+<span class="fc" id="L66">        mascotaRepository.deleteById(id);</span>
+<span class="fc" id="L67">    }</span>
+
+    @Override
+    public List&lt;Mascota&gt; listarMascotasPorPropietario(Long propietarioId) {
+<span class="fc" id="L71">        return mascotaRepository.findByPropietarioId(propietarioId);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

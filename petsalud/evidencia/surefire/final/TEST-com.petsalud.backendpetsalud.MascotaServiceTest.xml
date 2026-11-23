@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.041" tests="11" errors="0" skipped="0" failures="0" flakes="0">
+  <testcase name="registraYConsultaVariasMascotasDelMismoCliente" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.004" />
+  <testcase name="rechazaEspecieInvalida(String)[1]" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.002" />
+  <testcase name="rechazaEspecieInvalida(String)[2]" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.002" />
+  <testcase name="rechazaEspecieInvalida(String)[3]" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.0" />
+  <testcase name="rechazaPropietarioSinRolCliente" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.002" />
+  <testcase name="actualizaDatosDeMascotaYConservaSuPropietario" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.005" />
+  <testcase name="rechazaPropietarioInexistente" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.002" />
+  <testcase name="rechazaNombreInvalido(String)[1]" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.003" />
+  <testcase name="rechazaNombreInvalido(String)[2]" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.002" />
+  <testcase name="rechazaNombreInvalido(String)[3]" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.001" />
+  <testcase name="rechazaActualizarMascotaInexistente" classname="com.petsalud.backendpetsalud.MascotaServiceTest" time="0.001" />
+</testsuite>
